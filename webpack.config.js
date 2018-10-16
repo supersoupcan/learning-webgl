@@ -24,6 +24,11 @@ module.exports = {
         fallback: 'style-loader',
         use: ['css-loader', 'sass-loader']
       }),
+    },{
+      test: /\.glsl$/,
+      use: {
+        loader: 'webpack-glsl-loader'
+      }
     }]
   },
   plugins: [
